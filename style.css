@@ -7,10 +7,10 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #393E46;
+        --bg: #24273A;
         --fg: #C4D2F5;
         --links: #A6E3A1;
-        --headers: #8AADF4;
+        --headers: #393E46;
     }
 }
 
