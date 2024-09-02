@@ -1,18 +1,20 @@
-document.getElementById('color-switch').addEventListener('click', function() {
+// script.js
+
+document.getElementById('theme-switcher').addEventListener('click', function() {
     const bodyElement = document.body;
-    const isDarkMode = bodyElement.classList.toggle('dark-mode');
+    const isLightMode = bodyElement.classList.toggle('light');
 
     // Update button text based on the current mode
-    this.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    this.textContent = isLightMode ? 'Switch to Dark Mode' : 'Switch to Light Mode';
 
     // Optional: Save the mode in localStorage
-    localStorage.setItem('dark-mode', isDarkMode);
+    localStorage.setItem('light-mode', isLightMode);
 });
 
 // Load saved preference on page load
 window.onload = function() {
-    if (localStorage.getItem('dark-mode') === 'true') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('color-switch').textContent = 'Switch to Light Mode';
+    if (localStorage.getItem('light-mode') === 'true') {
+        document.body.classList.add('light');
+        document.getElementById('theme-switcher').textContent = 'Switch to Dark Mode';
     }
 };
