@@ -1,16 +1,16 @@
 :root {
     --bg: #393E46;
-    --fg: #C4D2F5;
-    --links: #A6E3A1;
-    --headers: #8AADF4;
+    --fg: #F7F7F7;
+    --links: #929AAB;
+    --headers: #EEEEEE;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #393E46;
-        --fg: #C4D2F5;
-        --links: #A6E3A1;
-        --headers: #8AADF4;
+        --fg: #F7F7F7;
+        --links: #929AAB;
+        --headers: #EEEEEE;
     }
 }
 
