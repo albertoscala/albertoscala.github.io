@@ -1,0 +1,66 @@
+:root {
+    --bg: #24273A;
+    --fg: #C4D2F5;
+    --links: #A6E3A1;
+    --headers: #8AADF4;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #24273A;
+        --fg: #C4D2F5;
+        --links: #A6E3A1;
+        --headers: #8AADF4;
+    }
+}
+
+html {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body {
+    font-size: large;
+    height: 100%;
+    background-color: var(--bg);
+    color: var(--fg);
+    margin: 2em auto;
+    max-width: 80ch;
+    padding: 1em;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+a {
+    color: var(--links);
+}
+
+h2 a {
+    text-decoration: none;
+    color: var(--headers);
+}
+
+h2::before {
+    content: '¶';
+    opacity: 0.2;
+    position: relative;
+    width: 1.5em;
+    text-align: center;
+    display: inline-block;
+    margin-left: -1.5em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li::before {
+    content: '[+] ';
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: -1em;
+    }
+}
