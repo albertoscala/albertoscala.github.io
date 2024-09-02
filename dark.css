@@ -1,12 +1,4 @@
 :root {
-    --bg: #393E46;
-    --fg: #F7F7F7;
-    --links: #929AAB;
-    --headers: #EEEEEE;
-}
-
-/* Alternative color palette */
-body.light {
     --bg: #EEEEEE;
     --fg: #222831;
     --links: #76ABAE;
