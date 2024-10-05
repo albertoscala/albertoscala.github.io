@@ -35,6 +35,13 @@ header {
     align-items: center;
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid var(--fg);
+    margin: 1em 0;
+    color: var(--fg);
+}
+
 #mode-toggle {
     background: none; 
     border: none; 
