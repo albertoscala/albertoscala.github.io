@@ -56,31 +56,31 @@ setInterval(() => {
 }, 50);
 
 function fetchProjects() {
-  let list = document.getElementById("projects");
+    let list = document.getElementById("projects");
 
-  fetch("https://api.github.com/users/albertoscala/repos")
-    .then(response => response.json())
-    .then(data => {
-      data.forEach(element => {
-        let project = document.createElement("li");
-        let link = document.createElement("a");
-        let title = document.createElement("h3");
-        let description = document.createElement("i");
+    fetch("https://api.github.com/users/albertoscala/repos")
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(element => {
+                let project = document.createElement("li");
+                let link = document.createElement("a");
+                let title = document.createElement("h3");
+                let description = document.createElement("i");
 
-        title.textContent = element.name;
-        description.textContent = element.description || ""; // handle null
+                title.textContent = element.name;
+                description.textContent = element.description || ""; // handle null
 
-        link.href = element.html_url;
-        link.target = "_blank"; // open in new tab
-        link.rel = "noopener noreferrer";
+                link.href = element.html_url;
+                link.target = "_blank"; // open in new tab
+                link.rel = "noopener noreferrer";
 
-        link.appendChild(title);
-        link.appendChild(description);
-        project.appendChild(link);
-        list.appendChild(project);
-      });
-    })
-    .catch(error => console.error("Error fetching projects:", error));
+                link.appendChild(title);
+                link.appendChild(description);
+                project.appendChild(link);
+                list.appendChild(project);
+            });
+        })
+        .catch(error => console.error("Error fetching projects:", error));
 }
 
 
