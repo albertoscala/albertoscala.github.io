@@ -9,7 +9,7 @@ body {
     height: 100%;
     font-family: 'IBM Plex Mono', monospace;
     background-color: #303537;
-    color: #e6edf3;
+    color: #c9d1d9;
     overflow: hidden;
     /* prevent body scroll since .right scrolls internally */
 }
@@ -41,7 +41,7 @@ body {
 
 .left h1 {
     font-size: 3rem;
-    color: #e6edf3;
+    color: #c9d1d9;
 }
 
 .left ul {
@@ -82,7 +82,7 @@ body {
 .donut {
     font-size: 10px;
     line-height: 8px;
-    color: #ffffff;
+    color: #c9d1d9;
     height: 340px;
     overflow: hidden;
     margin-bottom: 1rem;
@@ -115,7 +115,7 @@ body {
 .right h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #ffffff;
+    color: #c9d1d9;
 }
 
 .right ul {
@@ -148,7 +148,7 @@ body {
 .right i {
     font-size: 0.9rem;
     font-style: italic;
-    color: #aaa;
+    color: #c9d1d9;
     display: block;
     text-align: justify right;
     margin-top: 0.2rem;
