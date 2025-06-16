@@ -157,3 +157,32 @@ body {
     margin-left: auto;
     /* this helps to keep it aligned right within the max width */
 }
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .left {
+        flex: none;
+        height: auto;
+        overflow: visible;
+    }
+
+    .right {
+        flex: 1;
+        overflow-y: auto;
+        direction: ltr;
+        text-align: left;
+        padding: 1rem;
+    }
+
+    .right i {
+        text-align: left;
+        margin-left: 0;
+    }
+}
