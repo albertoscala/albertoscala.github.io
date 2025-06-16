@@ -152,7 +152,6 @@ body {
     display: block;
     text-align: justify right;
     margin-top: 0.2rem;
-    max-width: 500px;
     /* adjust to your preferred max width */
     margin-left: auto;
     /* this helps to keep it aligned right within the max width */
