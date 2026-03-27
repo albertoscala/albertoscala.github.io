@@ -4,7 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alberto Scala</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      background: #fff;
+      color: #000;
+      padding: 40px 20px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    body.dark {
+      background: #0d0d0d;
+      color: #ccc;
+    }
+
+    .inner {
+      max-width: 72ch;
+      margin: 0 auto;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #000;
+    }
+
+    a:visited {
+      color: #444;
+    }
+
+    body.dark a {
+      color: #ccc;
+    }
+
+    body.dark a:visited {
+      color: #888;
+    }
+
+    .toggle-row {
+      text-align: right;
+      margin-bottom: 1.5rem;
+    }
+
+    #theme-toggle {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 13px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #000;
+      padding: 0;
+      text-decoration: underline;
+    }
+
+    #theme-toggle:hover {
+      color: #555;
+    }
+
+    body.dark #theme-toggle {
+      color: #ccc;
+    }
+
+    body.dark #theme-toggle:hover {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
 
@@ -14,7 +92,7 @@
       <button id="theme-toggle" onclick="toggleTheme()">[ dark mode ]</button>
     </div>
 
-<pre class="header">
+<pre>
 Network Working Group                                    A. Scala
 Personal Page                                         Rome, Italy
                                        alberto.scala.it@gmail.com
@@ -37,14 +115,11 @@ Table of Contents
 
    1. Education
    2. Work Experience
-   3. Skills <!--4. Papers-->
+   3. Skills
    4. Projects
    5. Contact
 
 
-</pre>
-
-<pre class="section">
 1. Education
 
    B.Sc. Computer Science
@@ -68,19 +143,8 @@ Table of Contents
    Tools:      Git, Linux, Bash, GCC
    Areas:      Parallel computing, Low-level programming
 
-<!--
-4. Papers
 
-   [1] "Paper Title Goes Here"
-       Conference Name, 2024
-       <a href="#">https://example.com/paper1</a>
-
-   [2] "Another Paper Title"
-       Journal Name, 2023
-       <a href="#">https://example.com/paper2</a>
-
--->
-5. Projects
+4. Projects
 
    vulkan_runtime.h
       Vulkan-based runtime enabling CUDA-style GPU programming
@@ -118,6 +182,24 @@ Last updated: 2024
 
   </div>
 
-  <script src="main.js"></script>
+  <script>
+    function toggleTheme() {
+      const isDark = document.body.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.getElementById('theme-toggle').textContent =
+        isDark ? '[ light mode ]' : '[ dark mode ]';
+    }
+
+    (function () {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.body.classList.add('dark');
+        document.addEventListener('DOMContentLoaded', function () {
+          document.getElementById('theme-toggle').textContent = '[ light mode ]';
+        });
+      }
+    })();
+  </script>
+
 </body>
 </html>
