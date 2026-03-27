@@ -1,35 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alberto Scala</title>
-
-    <!-- IBM Plex Mono font -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alberto Scala</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <div class="container">
-        <div class="left">
-            <pre id="donut" class="donut"></pre>
-            <h1>Alberto Scala</h1>
-            <ul>
-                <li><a href="https://github.com/albertoscala" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/alberto-scala" target="_blank">LinkedIn</a></li>
-                <li><a href="https://x.com/linearberto" target="_blank">X</a></li>
-            </ul>
-        </div>
-        <div class="right">
-            <!-- Put my projects -->
-            <h2>Projects</h2>
-            <ul id="projects"></ul>
-        </div>
+
+  <div class="inner">
+
+    <div class="toggle-row">
+      <button id="theme-toggle" onclick="toggleTheme()">[ dark mode ]</button>
     </div>
 
-    <script src="main.js"></script>
-</body>
+<pre class="header">
+Network Working Group                                    A. Scala
+Personal Page                                         Rome, Italy
+                                       alberto.scala.it@gmail.com
 
+
+                         ALBERTO SCALA
+                      Personal Home Page
+                        Revision: 1.0
+
+
+Abstract
+
+   24-year-old CS graduate from Sapienza, University of Rome,
+   passionate about low-level systems and high-performance
+   computing. My work spans GPU scheduling, Vulkan runtimes,
+   parallel algorithms, and 3D rendering.
+
+
+Table of Contents
+
+   1. Education
+   2. Work Experience
+   3. Skills <!--4. Papers-->
+   4. Projects
+   5. Contact
+
+
+</pre>
+
+<pre class="section">
+1. Education
+
+   B.Sc. Computer Science
+      Sapienza, University of Rome, 2020-2025
+
+
+2. Work Experience
+
+   Embedded Software Engineer -- Capgemini Engineering
+      June 2025 - Present
+      @ Leonardo Electronics -- CUDA Developer.
+
+   Cybersecurity Consultant Intern -- BIP
+      September 2024 - January 2025
+      Vulnerability assessment on clients infrastructures.
+
+
+3. Skills
+
+   Languages:  C, C++, CUDA, Rust, Python
+   Tools:      Git, Linux, Bash, GCC
+   Areas:      Parallel computing, Low-level programming
+
+<!--
+4. Papers
+
+   [1] "Paper Title Goes Here"
+       Conference Name, 2024
+       <a href="#">https://example.com/paper1</a>
+
+   [2] "Another Paper Title"
+       Journal Name, 2023
+       <a href="#">https://example.com/paper2</a>
+
+-->
+5. Projects
+
+   vulkan_runtime.h
+      Vulkan-based runtime enabling CUDA-style GPU programming
+      across platforms with a familiar CUDA runtime-like API.
+      <a href="https://github.com/albertoscala/vulkan_runtime.h">https://github.com/albertoscala/vulkan_runtime.h</a>
+
+   open-mps
+      Open-source reimplementation of NVIDIA Multi-Process
+      Service (MPS) for legacy and unsupported GPUs, enabling
+      multi-process GPU sharing and scheduling experimentation.
+      <a href="https://github.com/albertoscala/open-mps">https://github.com/albertoscala/open-mps</a>
+
+   cuda-types
+      Host-side implementations of CUDA built-in types for
+      use outside of nvcc environments.
+      <a href="https://github.com/albertoscala/cuda-types">https://github.com/albertoscala/cuda-types</a>
+
+   cuda-bump-allocator
+      Arena-style GPU memory allocator for CUDA conforming to
+      DO-178C memory management requirements, enabling
+      deterministic device memory allocation.
+      <a href="https://github.com/albertoscala/cuda-bump-allocator">https://github.com/albertoscala/cuda-bump-allocator</a>
+
+
+5. Contact
+
+   Email:    <a href="mailto:alberto.scala.it@gmail.com">alberto.scala.it@gmail.com</a>
+   GitHub:   <a href="https://github.com/albertoscala">https://github.com/albertoscala</a>
+   LinkedIn: <a href="https://linkedin.com/in/alberto-scala">https://linkedin.com/in/alberto-scala</a>
+
+
+---
+Last updated: 2024
+</pre>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>

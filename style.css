@@ -1,187 +1,78 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,
 body {
-    height: 100%;
-    font-family: 'IBM Plex Mono', monospace;
-    background-color: #303537;
-    color: #c9d1d9;
-    overflow: hidden;
-    /* prevent body scroll since .right scrolls internally */
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  background: #fff;
+  color: #000;
+  padding: 40px 20px;
+  transition: background 0.2s, color 0.2s;
 }
 
-.container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    /* full viewport width */
+body.dark {
+  background: #0d0d0d;
+  color: #ccc;
 }
 
-.left,
-.right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    /* Remove justify-content: center on .right so content starts at top */
-    /* Add align-items: stretch so children fill width */
-    align-items: stretch;
-    overflow: hidden;
+.inner {
+  max-width: 72ch;
+  margin: 0 auto;
 }
 
-.left {
-    background-color: #303537;
-    text-align: center;
-    justify-content: center;
-    /* keep vertical centering */
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-.left h1 {
-    font-size: 3rem;
-    color: #c9d1d9;
+a {
+  color: #000;
 }
 
-.left ul {
-    display: flex;
-    justify-content: center;
-    /* pack items in center with minimal gaps */
-    align-items: center;
-    padding: 0;
-    gap: 8px;
-    /* optional: small gap between items */
+a:visited {
+  color: #444;
 }
 
-.left ul li {
-    display: contents;
+body.dark a {
+  color: #ccc;
 }
 
-.left li+li::before {
-    content: '|';
-    padding: 0 6px;
-    /* smaller left and right space around the separator */
-    color: #c9d1d9;
-    /* optional: separator color */
-    font-weight: bold;
-    /* optional: make separator stand out */
+body.dark a:visited {
+  color: #888;
 }
 
-.left a {
-    text-decoration: none;
-    color: #c9d1d9;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+/* dark mode toggle */
+.toggle-row {
+  text-align: right;
+  margin-bottom: 1.5rem;
 }
 
-.left a:hover {
-    color: #58a6ff;
+#theme-toggle {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  padding: 0;
+  text-decoration: underline;
 }
 
-.donut {
-    font-size: 10px;
-    line-height: 8px;
-    color: #c9d1d9;
-    height: 340px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    /* some spacing below donut */
+#theme-toggle:hover {
+  color: #555;
 }
 
-/* RIGHT PANEL */
-
-.right {
-    background-color: #303537;
-    overflow-y: auto;
-    height: 100vh;
-    /* full viewport height */
-    padding: 1rem;
-    justify-content: flex-start;
-    /* align content to top */
-    direction: rtl;
-    text-align: justify;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
+body.dark #theme-toggle {
+  color: #ccc;
 }
 
-.right::-webkit-scrollbar {
-    display: none;
-    /* Chrome, Safari and Opera */
-}
-
-.right h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #c9d1d9;
-}
-
-.right ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    overflow-wrap: break-word;
-    /* avoid overflow from long words */
-}
-
-.right li {
-    margin: 10px 0;
-    word-wrap: break-word;
-}
-
-.right a {
-    text-decoration: none;
-    color: #c9d1d9;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-    display: inline-block;
-    max-width: 100%;
-    word-break: break-word;
-}
-
-.right a:hover {
-    color: #58a6ff;
-}
-
-.right i {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #c9d1d9;
-    display: block;
-    text-align: justify right;
-    margin-top: 0.2rem;
-    /* adjust to your preferred max width */
-    margin-left: auto;
-    /* this helps to keep it aligned right within the max width */
-}
-
-/* MOBILE SUPPORT */
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .left {
-        flex: none;
-        height: auto;
-        overflow: visible;
-    }
-
-    .right {
-        flex: 1;
-        overflow-y: auto;
-        direction: ltr;
-        text-align: left;
-        padding: 1rem;
-    }
-
-    .right i {
-        text-align: left;
-        margin-left: 0;
-    }
+body.dark #theme-toggle:hover {
+  color: #fff;
 }
